@@ -1,8 +1,8 @@
 # A simple job for flagging a specified Sphinx document in a given index as
 # 'deleted'.
 #  
-class ThinkingSphinx::Deltas::FlagAsDeletedJob
-  attr_accessor :indexes, :document_id
+class ThinkingSphinx::Deltas::FlagAsDeletedJob < Struct.new(:indexes, :document_id)
+  # attr_accessor :indexes, :document_id
   
   # Initialises the object with an index name and document id. Please note that
   # the document id is Sphinx's unique identifier, and will almost certainly not
@@ -11,9 +11,9 @@ class ThinkingSphinx::Deltas::FlagAsDeletedJob
   # @param [String] index The index name
   # @param [Integer] document_id The document id
   # 
-  def initialize(indexes, document_id)
-    @indexes, @document_id = indexes, document_id
-  end
+  # def initialize(indexes, document_id)
+  #   @indexes, @document_id = indexes, document_id
+  # end
   
   # Updates the sphinx_deleted attribute for the given document, setting the
   # value to 1 (true). This is not a special attribute in Sphinx, but is used

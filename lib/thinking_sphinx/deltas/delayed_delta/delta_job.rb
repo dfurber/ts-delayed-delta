@@ -1,15 +1,15 @@
 # A simple job class that processes a given index.
 # 
-class ThinkingSphinx::Deltas::DeltaJob
-  attr_accessor :indexes
+class ThinkingSphinx::Deltas::DeltaJob < Struct.new(:indexes)
+  # attr_accessor :indexes
   
   # Initialises the object with an index name.
   # 
   # @param [String] index the name of the Sphinx index
   # 
-  def initialize(indexes)
-    @indexes = indexes
-  end
+  # def initialize(indexes)
+  #   @indexes = indexes
+  # end
   
   # Shows index name in Delayed::Job#name.
   # 

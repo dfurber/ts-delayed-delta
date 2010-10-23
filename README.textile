@@ -1,5 +1,7 @@
 h1. Delayed Deltas for Thinking Sphinx
 
+DF: Modified to make Rails 3 / Ruby 1.9.2 happy. Simply changed DeltaJob and FlagAsDeletedJob to extend Struct.new, like other delayed job classes.
+
 h2. Installation
 
 You'll need Thinking Sphinx 1.3.0 or later, and Delayed Job as well. The latter is flagged as a dependency.
